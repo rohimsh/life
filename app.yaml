@@ -1,0 +1,28 @@
+application: life
+version: 1
+runtime: php
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /snake.js
+  script: snake.js
+
+- url: /snake.css
+  script: snake.css
+
+- url: /bomb.*
+  script: bomb.mp3
+
+- url: /go.*
+  script: go.mp3
+
+- url: /main.*
+  script: main.mp3
+
+- url: .*
+  script: main.php
